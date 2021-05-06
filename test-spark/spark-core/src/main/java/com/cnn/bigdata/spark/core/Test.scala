@@ -2,10 +2,10 @@ package com.cnn.bigdata.spark.core
 
 /**
  * @author Administrator
- * @date 2021/5/5
+ * @date 2021/5/6
  */
-class Test {
+object Test {
   def main(args: Array[String]): Unit = {
-    println("hello spark")
+    print("hello spark")
   }
 }
