@@ -16,7 +16,7 @@ object WordCount {
     //读取文件行
     val lines: RDD[String] = sc.textFile("datas")
     //分词-扁平话
-    val words: RDD[String] = lines.flatMap(_.split(" "))
+    val words: RDD[String] = lines.flatMap((_: String).split(" "))
 
     //根据单词分组统计
     val wordGroup: RDD[(String, Iterable[String])] = words.groupBy((word: String) => word)
