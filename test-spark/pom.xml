@@ -4,13 +4,26 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.example</groupId>
+	<groupId>com.cnn.bigdata</groupId>
 	<artifactId>test-spark</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<modules>
 		<module>spark-core</module>
 	</modules>
+	<properties>
+		<spark.version>3.0.0</spark.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.spark</groupId>
+				<artifactId>spark-core_2.12</artifactId>
+				<version>${spark.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 
 
 </project>
